@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+{% block content %}
+    <h2>Your cloudControl App "{{ applicationName }}"</h2>
+    <table>
+        <tr><td>date created</td><td>{{ application.date_created }}</td></tr>
+        <tr><td>date modified</td><td>{{ application.date_modified }}</td></tr>
+        <tr><td>users</td>
+            <td>
+                {% for user in application.users %}
+                    {{ user.username|e }}, {{ user.email|e }}<br/>
+                {% endfor %}
+            </td>
+        </tr>
+        <tr><td>repository</td><td>{{ application.repository }}</td></tr>
+        <tr><td>deployments</td>
+            <td>
+                {% for deployment in application.deployments %}
+                    <a href="/deployment/{{ deployment.name|e }}">{{ deployment.name|e }}</a><br/>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+    <hr/>
+    <a href="/logout">Logout</a>
+{% endblock %}

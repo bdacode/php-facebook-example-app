@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+{% block content %}
+    <h1>Your cloudControl Apps</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Application Name</th>
+                <th>Application Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for app in applicationList %}
+                <tr><td><a href="/app/{{ app.name }}">{{ app.name }}</a></td><td>{{ app.type.name }}</td></tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total Apps:</td>
+                <td>{{ applicationList|length }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr/>
+    <a href="/logout">Logout</a>
+{% endblock %}

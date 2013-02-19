@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+{% block content %}
+    <h2>Your cloudControl Deployment "{{ deployment.name }}"</h2>
+    <table>
+        <tr><td>date created</td><td>{{ deployment.date_created }}</td></tr>
+        <tr><td>date modified</td><td>{{ deployment.date_modified }}</td></tr>
+        <tr><td>state</td><td>{{ deployment.state }}</td></tr>
+        <tr><td>stack</td><td>{{ deployment.stack.name }}</td></tr>
+        <tr><td>dep_id</td><td>{{ deployment.dep_id }}</td></tr>
+        <tr><td>version</td><td>{{ deployment.version }}</td></tr>
+        <tr><td>min_boxes</td><td>{{ deployment.min_boxes }}</td></tr>
+        <tr><td>max_boxes</td><td>{{ deployment.min_boxes }}</td></tr>
+        <tr><td>default_subdomain</td><td><a href="http://{{ deployment.default_subdomain }}" target="_blank">{{ deployment.default_subdomain }}</a></td></tr>
+    </table>
+    <hr/>
+    <a href="/logout">Logout</a>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.twig" %}
+{% block content %}
+    <h2>Login to cloudControl</h2> 
+    <form action="/login" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" value="{{ 'Send'|trans }}"/>
+    </form>
+{% endblock %}

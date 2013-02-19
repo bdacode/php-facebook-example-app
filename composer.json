@@ -1,0 +1,17 @@
+{
+    "require": {
+        "doctrine/dbal": "2.2.*",
+        "facebook/php-sdk": "dev-master",
+        "silex/silex": "1.0.*@dev",
+        "symfony/form": "2.1.*",
+        "symfony/twig-bridge": "2.1.*",
+        "symfony/translation": "2.1.*",
+        "cloudcontrol/phpcclib": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ]
+}

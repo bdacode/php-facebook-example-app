@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+body {
+    font-family: sans-serif;
+}
+label {
+    display: block;
+    width: 150px;
+}
+td {
+    vertical-align:top;
+}
